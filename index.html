@@ -1,36 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>My Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Welcome to my website</h1>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <h2>About me</h2>
-        <p>Hi, my name is John and I'm a web developer.</p>
-      </section>
-      <section>
-        <h2>Recent work</h2>
-        <ul>
-          <li><a href="#">Project 1</a></li>
-          <li><a href="#">Project 2</a></li>
-          <li><a href="#">Project 3</a></li>
-        </ul>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2023 My Website</p>
-    </footer>
-  </body>
-</html>
+from flask import Flask, render_template, jsonify
+import random
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/random_number')
+def random_number():
+    number = random.randint(1, 100)
+    return jsonify(number=number)
+
+if __name__ == '__main__':
+    app.run(debug=True)
