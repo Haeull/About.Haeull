@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Number Display</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <title>Random Numbers</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
 </head>
 <body>
-	<h1>Number Display</h1>
-	<p id="number"></p>
-
-	<script>
-		setInterval(function() {
-			$.get("/number", function(data) {
-				$("#number").text(data);
-			});
-		}, 1000);
-	</script>
+  <h1>Random Numbers</h1>
+  <p>Here are 10 random numbers:</p>
+  <ul>
+    <li>Number 1: <span id="number1"></span></li>
+    <li>Number 2: <span id="number2"></span></li>
+    <li>Number 3: <span id="number3"></span></li>
+    <li>Number 4: <span id="number4"></span></li>
+    <li>Number 5: <span id="number5"></span></li>
+    <li>Number 6: <span id="number6"></span></li>
+    <li>Number 7: <span id="number7"></span></li>
+    <li>Number 8: <span id="number8"></span></li>
+    <li>Number 9: <span id="number9"></span></li>
+    <li>Number 10: <span id="number10"></span></li>
+  </ul>
 </body>
 </html>
