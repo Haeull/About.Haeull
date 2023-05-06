@@ -41,6 +41,10 @@ header {
     font-weight: bold;
 }
 
+.memoryhall {
+    display: none;
+}
+
 nav ul {
     display: flex;
     list-style: none;
